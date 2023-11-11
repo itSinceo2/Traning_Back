@@ -1,0 +1,38 @@
+{
+  "name": "traning_back",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jcruzb/Traning_Back.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jcruzb/Traning_Back/issues"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cloudinary": "^1.35.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "http-errors": "^2.0.0",
+    "http-status-codes": "^2.2.0",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.0.3",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "multer-storage-cloudinary": "^4.0.0",
+    "nodemailer": "^6.9.6",
+    "react-helmet": "^6.1.0"
+  },
+  "homepage": "https://github.com/Jcruzb/Traning_Back#readme"
+}
