@@ -29,13 +29,15 @@ app.get("/", (req, res) => {
     res.json({ message: "Welcome to the API" });
   });
 
-
 //rutas
 const usersRouter = require("./routes/user.routes");
 app.use("/users", usersRouter);
 
 const coursesRouter = require("./routes/courses.routes");
 app.use("/courses", coursesRouter);
+
+const testsRouter = require("./routes/test.routes");
+app.use("/test", testsRouter);
 
 //route not found
 app.use((req, res, next) => {
