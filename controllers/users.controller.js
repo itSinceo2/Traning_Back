@@ -26,7 +26,6 @@ module.exports.login = (req, res, next) => {
     }
     User.findOne({ email: email })
         .then(user => {
-            console.log(user);
             if(!user){
                 next(loginError());
             } else {
@@ -97,15 +96,23 @@ module.exports.delete = (req, res, next) => {
 }
 
 module.exports.getCurrentUser = (req, res, next) => {
-    User.findById(req.user.id)
-        .populate('company')
-        .populate('clientSpace')
+    console.log("User ID from req.currentUser:", req.currentUser ? req.currentUser : "Not available");
+
+    console.log("entra en getCurrentUser");
+    User.findById(req.currentUser)  // Usar req.currentUser en lugar de req.user.id
         .then(user => {
-            if(!user){
+            console.log("user: " + user);
+            if (!user) {
+                console.log("user not found");
                 next(createError(StatusCodes.NOT_FOUND, "User not found"));
             } else {
+                console.log("user found");
                 res.json(user);
             }
         })
-        .catch(next);
+        .catch((error) => {
+            console.log("error: " + error);
+            next(error);
+        });
+    console.log("sale de getCurrentUser");
 }
