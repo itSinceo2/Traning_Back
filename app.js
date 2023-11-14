@@ -34,6 +34,9 @@ app.get("/", (req, res) => {
 const usersRouter = require("./routes/user.routes");
 app.use("/users", usersRouter);
 
+const coursesRouter = require("./routes/courses.routes");
+app.use("/courses", coursesRouter);
+
 //route not found
 app.use((req, res, next) => {
     next(createError(StatusCodes.NOT_FOUND, "Route not found"));
