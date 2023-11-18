@@ -42,10 +42,21 @@ const userSchema = new Schema(
             type: Schema.Types.ObjectId,
             ref: 'Company'
         },
-        clientSpace: {
-            type: Schema.Types.ObjectId,
-            ref: 'ClientSpace'
-        }
+        courses: [{
+            course: {
+                type: Schema.Types.ObjectId,
+                ref: 'Course'
+            },
+            status: {
+                type: String,
+                enum: ['enrolled', 'completed', 'pending'],
+                default: 'pending'
+            },
+            startDate: {
+                type: Date,
+                default: Date.now
+            }
+        }],
     },
     {
         timestamps: true,

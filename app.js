@@ -39,6 +39,9 @@ app.use("/courses", coursesRouter);
 const testsRouter = require("./routes/test.routes");
 app.use("/test", testsRouter);
 
+const companysRouter = require("./routes/companys.routes");
+app.use("/companys", companysRouter);
+
 //route not found
 app.use((req, res, next) => {
     next(createError(StatusCodes.NOT_FOUND, "Route not found"));
