@@ -21,6 +21,8 @@ module.exports.create = (req, res, next) => {
         req.body.logo = req.file.path;
     }
     
+    console.log(req.file);
+
     const company = new Company(req.body);
     company.save()
         .then(company => {

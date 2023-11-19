@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+const logoPattern = /^https?:\/\//i;
+
 const companySchema = new Schema({
     name: {
         type: String,
@@ -9,7 +11,7 @@ const companySchema = new Schema({
     },
     logo: {
         type: String,
-        default: 'https://res.cloudinary.com/dv7hswrot/image/upload/v1606988059/avatar/avatar_cugq40.png'
+        default: 'https://static.thenounproject.com/png/638636-200.png'
     },
     nif: {
         type: String,
@@ -34,9 +36,9 @@ const companySchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'Course'
     }]
-    }, {
+}, {
     timestamps: true,
-    toJSON: 
+    toJSON:
     {
         transform: (doc, ret) => {
             ret.id = doc._id;

@@ -1,7 +1,7 @@
 //companys routes
 const express = require('express');
 const router = express.Router();
-const upload = require('../config/multer.config');
+const upload = require('../config/cloudinary.config');
 const companiesController = require('../controllers/companies.controller');
 const authMiddleware = require('../middlewares/auth.middleware');
 
