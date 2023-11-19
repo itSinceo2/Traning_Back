@@ -11,6 +11,21 @@ const companySchema = new Schema({
         type: String,
         default: 'https://res.cloudinary.com/dv7hswrot/image/upload/v1606988059/avatar/avatar_cugq40.png'
     },
+    nif: {
+        type: String,
+        required: true,
+        unique: true
+    },
+    phone: {
+        type: Number,
+        required: true,
+        required: true
+    },
+    email: {
+        type: String,
+        required: true,
+        unique: true
+    },
     users: [{
         type: Schema.Types.ObjectId,
         ref: 'User'
