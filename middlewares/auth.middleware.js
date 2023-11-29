@@ -18,7 +18,6 @@ module.exports.isAuthenticated = (req, res, next) => {
             next(err);
           } else {
             req.currentUser = decodedToken.id;
-            console.log("decodedToken: "+ decodedToken.id);
             next(); 
           }
         })

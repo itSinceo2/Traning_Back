@@ -14,15 +14,31 @@ const courseSchema = new mongoose.Schema({
         required: [true, 'Description is required'],
         trim: true
     },
-    image: {
+    mainImage: {
         type: String,
-        required: [true, 'Image is required'],
         trim: true
     },
     students: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User'
+    }],
+    content:[{
+        title: {
+            type: String,
+           
+            trim: true
+        },
+        description: {
+            type: String,
+            
+            trim: true
+        },
+        image: {
+            type: String,
+            trim: true
+        }
     }]
+    
 }, { timestamps: true,
     toJSON: {
         transform: (doc, ret) => {

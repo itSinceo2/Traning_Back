@@ -6,7 +6,7 @@ const authMiddleware = require('../middlewares/auth.middleware');
 const upload = require('../config/multer.config');
 
 router.get('/', coursesController.getAll);
-router.post('/create', authMiddleware.isAuthenticated, upload.single('image'), coursesController.create);
+router.post('/create', authMiddleware.isAuthenticated, upload.array('image'), coursesController.create);
 router.get('/:id', coursesController.getOne);
 router.put('/:id', authMiddleware.isAuthenticated, upload.single('image'), coursesController.update);
 router.delete('/:id', authMiddleware.isAuthenticated, coursesController.delete);

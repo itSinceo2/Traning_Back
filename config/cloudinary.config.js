@@ -8,8 +8,10 @@ cloudinary.config({
   api_key: process.env.CLOUDINARY_KEY,
   api_secret: process.env.CLOUDINARY_SECRET,
 });
+console.log('Entra en cloudinary.config.js');
 
 const storage = new CloudinaryStorage({
+  
   cloudinary: cloudinary,
   params: {
     folder: "SinCeO2/TraningApp",
