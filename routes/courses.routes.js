@@ -3,12 +3,14 @@ const express = require('express');
 const router = express.Router();
 const coursesController = require('../controllers/courses.controller');
 const authMiddleware = require('../middlewares/auth.middleware');
-const upload = require('../config/multer.config');
+const upload = require('../config/cloudinary.config');
+
 
 router.get('/', coursesController.getAll);
-router.post('/create', authMiddleware.isAuthenticated, upload.array('image'), coursesController.create);
+router.post('/create', authMiddleware.isAuthenticated, upload.single('mainImage'), coursesController.create);
 router.get('/:id', coursesController.getOne);
 router.put('/:id', authMiddleware.isAuthenticated, upload.single('image'), coursesController.update);
+router.put('/:id/content', authMiddleware.isAuthenticated, coursesController.updateContent);
 router.delete('/:id', authMiddleware.isAuthenticated, coursesController.delete);
 
 module.exports = router;

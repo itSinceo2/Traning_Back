@@ -25,7 +25,6 @@ const courseSchema = new mongoose.Schema({
     content:[{
         title: {
             type: String,
-           
             trim: true
         },
         description: {
@@ -37,7 +36,8 @@ const courseSchema = new mongoose.Schema({
             type: String,
             trim: true
         }
-    }]
+    }
+]
     
 }, { timestamps: true,
     toJSON: {
