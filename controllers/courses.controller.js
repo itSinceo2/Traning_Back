@@ -52,19 +52,19 @@ module.exports.getOne = (req, res, next) => {
 module.exports.update = (req, res, next) => {
     const id = req.params.id;
     const course = req.body;
-
-    console.log(req.file); // Agrega este log para verificar la información de la imagen
-
+    
     if (req.file) {
         // Actualizar el campo de imagen para que contenga la URL de Cloudinary
         course.image = req.file.path;
     }
+    console.log(course);
 
     Course.findByIdAndUpdate(id, course, { new: true })
         .then(course => {
             if (!course) {
                 next(createError(StatusCodes.NOT_FOUND, "Course not found"));
             } else {
+                console.log('entrando en update');
                 res.status(StatusCodes.OK).json(course);
             }
         })
@@ -76,10 +76,16 @@ module.exports.update = (req, res, next) => {
 
 
 
-//actualizando sólo el content de un curso
 module.exports.updateContent = (req, res, next) => {
     const id = req.params.id;
     const content = req.body;
+
+    if (req.file) {
+        content.image = req.file.path;
+    }
+    console.log('Entra en updateContent')
+
+    console.log(req.body);
 
     Course.findByIdAndUpdate(id, { $push: { content: content } }, { new: true })
         .then(course => {

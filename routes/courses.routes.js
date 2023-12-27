@@ -10,7 +10,7 @@ router.get('/', coursesController.getAll);
 router.post('/create', authMiddleware.isAuthenticated, upload.single('mainImage'), coursesController.create);
 router.get('/:id', coursesController.getOne);
 router.put('/:id', authMiddleware.isAuthenticated, upload.single('image'), coursesController.update);
-router.put('/:id/content', authMiddleware.isAuthenticated, coursesController.updateContent);
+router.put('/:id/content', authMiddleware.isAuthenticated, upload.single('image'), coursesController.updateContent);
 router.delete('/:id', authMiddleware.isAuthenticated, coursesController.delete);
 
 module.exports = router;
