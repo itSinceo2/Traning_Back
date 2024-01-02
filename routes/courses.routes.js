@@ -11,6 +11,7 @@ router.post('/create', authMiddleware.isAuthenticated, upload.single('mainImage'
 router.get('/:id', coursesController.getOne);
 router.put('/:id', authMiddleware.isAuthenticated, upload.single('image'), coursesController.update);
 router.put('/:id/content', authMiddleware.isAuthenticated, upload.single('image'), coursesController.updateContent);
+router.put('/:id/image', authMiddleware.isAuthenticated, upload.single('image'), coursesController.updateContentImage);
 router.delete('/:id', authMiddleware.isAuthenticated, coursesController.delete);
 
 module.exports = router;

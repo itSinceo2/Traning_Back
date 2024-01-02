@@ -17,7 +17,6 @@ module.exports.isAuthenticated = (req, res, next) => {
             console.log("error: " + err);
             next(err);
           } else {
-            console.log('Está autenticado ... Next')
             req.currentUser = decodedToken.id;
             next(); 
           }
