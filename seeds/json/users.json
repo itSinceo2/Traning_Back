@@ -1,0 +1,152 @@
+[
+  {
+    "username": "Arnold_Schwarzenegger",
+    "password": "arnold123",
+    "email": "arnold.sales@hack-erp.com",
+    "avatar": "https://image.tmdb.org/t/p/w500/sOkCXc9xuSr6v7mdAq9LwEBje68.jpg",
+    "active": true,
+    "company": "65591b1dc66ef5be24705361",
+    "courses": [
+      {
+        "course": "659427de15b4b05b063a2c36",
+        "status": "pending",
+        "startDate": "2023-11-11T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "username": "Ben_Affleck",
+    "password": "ben123",
+    "email": "ben.sales@hack-erp.com",
+    "avatar": "https://image.tmdb.org/t/p/w500/cPuPt6mYJ83DjvO3hbjNGug6Fbi.jpg",
+    "active": true,
+    "company": "6559489f23383c514300f14d",
+    "courses": [
+      {
+        "course": "659427de15b4b05b063a2c36",
+        "status": "pending",
+        "startDate": "2023-11-11T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "username": "Idris_Elba",
+    "password": "idris123",
+    "email": "idris.production@hack-erp.com",
+    "avatar": "https://image.tmdb.org/t/p/w500/d9NkfCwczP0TjgrjpF94jF67SK8.jpg",
+    "active": true,
+    "company": "6559bcf223383c514300f2bc",
+    "courses": [
+      {
+        "course": "659427de15b4b05b063a2c36",
+        "status": "pending",
+        "startDate": "2023-11-11T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "username": "Johnny_Depp",
+    "password": "johnny123",
+    "email": "johnny.production@hack-erp.com",
+    "avatar": "https://image.tmdb.org/t/p/w500/kbWValANhZI8rbWZXximXuMN4UN.jpg",
+    "active": true,
+    "company": "6559e8128b68f37c58b05484",
+    "courses": [
+      {
+        "course": "659427de15b4b05b063a2c36",
+        "status": "pending",
+        "startDate": "2023-11-11T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "username": "Monica_Bellucci",
+    "password": "monica123",
+    "email": "monica.warehouse@hack-erp.com",
+    "avatar": "https://image.tmdb.org/t/p/w500/qlT4904d8oi2NIs28RrgnIZDFZB.jpg",
+    "active": true,
+    "company": "65591b1dc66ef5be24705361",
+    "courses": [
+      {
+        "course": "659427de15b4b05b063a2c36",
+        "status": "pending",
+        "startDate": "2023-11-11T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "username": "Gal_Gadot",
+    "password": "gal123",
+    "email": "gal.warehouse@hack-erp.com",
+    "avatar": "https://image.tmdb.org/t/p/w500/34kHAyBaBhq2kUrmhM15paEBuuI.jpg",
+    "active": true,
+    "company": "6559489f23383c514300f14d",
+    "courses": [
+      {
+        "course": "659427de15b4b05b063a2c36",
+        "status": "pending",
+        "startDate": "2023-11-11T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "username": "Ian_McKellen",
+    "password": "ian123",
+    "email": "ian.purchasing@hack-erp.com",
+    "avatar": "https://image.tmdb.org/t/p/w500/coWjgMEYJjk2OrNddlXCBm8EIr3.jpg",
+    "active": true,
+    "company": "6559bcf223383c514300f2bc",
+    "courses": [
+      {
+        "course": "659427de15b4b05b063a2c36",
+        "status": "pending",
+        "startDate": "2023-11-11T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "username": "Matt_Damon",
+    "password": "matt123",
+    "email": "matt.purchasing@hack-erp.com",
+    "avatar": "https://image.tmdb.org/t/p/w500/elSlNgV8xVifsbHpFsqrPGxJToZ.jpg",
+    "active": true,
+    "company": "6559e8128b68f37c58b05484",
+    "courses": [
+      {
+        "course": "659427de15b4b05b063a2c36",
+        "status": "pending",
+        "startDate": "2023-11-11T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "username": "David_Harbour",
+    "password": "david123",
+    "email": "david.sales@hack-erp.com",
+    "avatar": "https://image.tmdb.org/t/p/w500/chPekukMF5SNnW6b22NbYPqAStr.jpg",
+    "active": true,
+    "company": "65591b1dc66ef5be24705361",
+    "courses": [
+      {
+        "course": "659427de15b4b05b063a2c36",
+        "status": "pending",
+        "startDate": "2023-11-11T00:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "username": "Ansel_Elgort",
+    "password": "ansel123",
+    "email": "ansel.sales@hack-erp.com",
+    "avatar": "https://image.tmdb.org/t/p/w500/uQYUfGvOZkB5x25Z19UeyLABHmr.jpg",
+    "active": true,
+    "company": "6559489f23383c514300f14d",
+    "courses": [
+      {
+        "course": "659427de15b4b05b063a2c36",
+        "status": "pending",
+        "startDate": "2023-11-11T00:00:00.000Z"
+      }
+    ]
+  }
+]

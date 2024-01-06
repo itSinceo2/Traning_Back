@@ -73,34 +73,34 @@ module.exports.update = (req, res, next) => {
 
 
 module.exports.updateContentImage = (req, res, next) => {
-
-    console.log('Entra en updateContentImage')
-
     const id = req.params.id;
     const contentId = req.body.contentId;
-    const content = req.file;
+    const updateFields = {};
 
     if (req.file) {
-        content.image = req.file.path;
+        updateFields["content.$.image"] = req.file.path;
     }
 
-    Course.findOneAndUpdate({ _id: id, "content._id": contentId }, { $set: { "content.$": content } }, { new: true })
-        .then(course => {
-            if (!course) {
-                next(createError(StatusCodes.NOT_FOUND, "Course not found"));
-            } else {
-                console.log('entrando en update');
-                res.status(StatusCodes.OK).json(course);
-                console.log("Content updated");
-                
-            }
-        })
+    Course.findOneAndUpdate(
+        { _id: id, "content._id": contentId },
+        { $set: updateFields },
+        { new: true }
+    )
+    .then(course => {
+        if (!course) {
+            next(createError(StatusCodes.NOT_FOUND, "Course not found"));
+        } else {
+            console.log('entrando en update');
+            res.status(StatusCodes.OK).json(course);
+            console.log("Content updated");
+        }
+    })
+    .catch((err) => {
+        console.log(err);
+        next(createError(StatusCodes.INTERNAL_SERVER_ERROR, "Internal server error"));
+    });
+};
 
-        .catch((err) => {
-            console.log(err);
-            next(createError(StatusCodes.INTERNAL_SERVER_ERROR, "Internal server error"));
-        });
-}
 
 
 module.exports.updateContent = (req, res, next) => {
