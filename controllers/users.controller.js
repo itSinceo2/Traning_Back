@@ -14,7 +14,7 @@ module.exports.register = (req, res, next) => {
         .then(user => {
             res.status(StatusCodes.CREATED).json(user);
         })
-        .catch(next);
+        .catch((err) => console.log(err));
 }
 
 module.exports.login = (req, res, next) => {
@@ -61,8 +61,13 @@ module.exports.getOne = (req, res, next) => {
   };
 
 module.exports.list = (req, res, next) => {
+//lista de usuarios populando la propiedad company
     User.find()
-        .then(users => res.json(users))
+        .populate("company")
+        .populate("courses.course")
+        .then(users => {
+            res.json(users);
+        })
         .catch(next);
 }
 

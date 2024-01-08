@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const SALT_WORK_FACTOR = 10;
 const { Schema, model } = mongoose;
+const ROLES = ['Administrador SinCeO2','Administrador', 'Usuario'];
 
 const userSchema = new Schema(
     {
@@ -20,6 +21,11 @@ const userSchema = new Schema(
             required: [true, 'Email is required.'],
             unique: true,
             trim: true
+        },
+        role: {
+            type: String,
+            enum: ROLES,
+            default: 'user'
         },
         avatar: {
             type: String,
@@ -45,7 +51,8 @@ const userSchema = new Schema(
         courses: [{
             course: {
                 type: Schema.Types.ObjectId,
-                ref: 'Course'
+                ref: 'Course',
+                default: null
             },
             status: {
                 type: String,
