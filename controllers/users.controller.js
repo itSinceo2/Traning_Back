@@ -102,7 +102,8 @@ module.exports.delete = (req, res, next) => {
 
 module.exports.getCurrentUser = (req, res, next) => {
 
-    User.findById(req.currentUser)  // Usar req.currentUser en lugar de req.user.id
+    User.findById(req.currentUser)
+        .populate("company")
         .then(user => {
             if (!user) {
                 next(createError(StatusCodes.NOT_FOUND, "User not found"));
