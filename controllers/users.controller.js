@@ -72,7 +72,6 @@ module.exports.list = (req, res, next) => {
 }
 
 module.exports.update = (req, res, next) => {
-    console.log('ENTRAAAAAAAAAAAAAAAAAAAAAAAAAAAA');
     const { id } = req.params;
     if(req.file){
         req.body.avatar = req.file.path;
@@ -109,6 +108,7 @@ module.exports.getCurrentUser = (req, res, next) => {
 
     User.findById(req.currentUser)
         .populate("company")
+        .populate("courses.course")
         .then(user => {
             if (!user) {
                 next(createError(StatusCodes.NOT_FOUND, "User not found"));
