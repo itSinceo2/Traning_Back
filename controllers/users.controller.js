@@ -72,10 +72,12 @@ module.exports.list = (req, res, next) => {
 }
 
 module.exports.update = (req, res, next) => {
+    console.log('ENTRAAAAAAAAAAAAAAAAAAAAAAAAAAAA');
     const { id } = req.params;
     if(req.file){
         req.body.avatar = req.file.path;
     }
+    console.log(req.body);
     User.findByIdAndUpdate(id, req.body, { new: true })
     .then(user => {
         if(!user){
@@ -84,7 +86,10 @@ module.exports.update = (req, res, next) => {
             res.json(user);
         }
     })
-    .catch(next);
+    .catch((error) => {
+        console.log("error: " + error);
+        next(error);
+    });
 }
 
 module.exports.delete = (req, res, next) => {
