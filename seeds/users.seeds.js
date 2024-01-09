@@ -4,7 +4,7 @@ require("../config/db.config");
 console.log("Seeding users...")
 
 const mongoose = require("mongoose");
-const Users = require("../Models/User.model");
+const Users = require("../models/User.model");
 const users = require("./json/users.json");
 
 const seedUsers = () => {
