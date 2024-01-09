@@ -1,0 +1,51 @@
+[
+    {
+        "_id":"659427de15b4b05b063a2c36",
+        "name": "ISO 50001 Sistema de Gestión de la Energía",
+        "description": "Curso de Interpretación de Norma ISO 50001:2016",
+        "mainImage": "https://res.cloudinary.com/dqyphg6sa/image/upload/v1704208350/SinCeO2/TraningApp/un81v1tj3bphbsesejwj.png",
+        "content": [
+          {
+            "title": "4.1 contexto",
+            "description": "asdasdasd",
+            "image": "https://res.cloudinary.com/dqyphg6sa/image/upload/v1704707452/SinCeO2/TraningApp/njpo9sirix5nmj1blo4p.png"
+          }
+        ]
+      },
+      {
+        "_id":"659427de15b4b05b063a2c37",
+        "name": "ISO 45001",
+        "description": "Sistema de Gestión de la Seguridad y salud Ocupacional",
+        "mainImage": "https://res.cloudinary.com/dqyphg6sa/image/upload/v1704832073/SinCeO2/TraningApp/kxdmzcbv2qbq07iqqnuw.webp",
+        "content": [
+          {
+            "title": "4.1 Contexto de la Organización",
+            "description": "La organización debe identificar el contexto interno y externo que pueda afectar al alcance de los objetivos de seguridad y salud Ocupacional",
+            "image": "https://res.cloudinary.com/dqyphg6sa/image/upload/v1704832184/SinCeO2/TraningApp/lfewlxym5otn0ds1wvxc.png"
+          },
+          {
+            "title": "4.2 Partes Interesadas",
+            "description": "La organización debe identificar las partes iteresadas pertinentes ...",
+            "image": "https://res.cloudinary.com/dqyphg6sa/image/upload/v1704832296/SinCeO2/TraningApp/w3wgtvpejrne403xuxak.jpg"
+          }
+        ]
+      },
+      {
+        "_id":"659427de15b4b05b063a2c38",
+        "name": "ISO 9001:2015",
+        "description": "Sistema de Gestión de la Calidad",
+        "mainImage": "https://res.cloudinary.com/dqyphg6sa/image/upload/v1704832357/SinCeO2/TraningApp/i0scrykw8bu29f1ndgps.jpg",
+        "content": [
+          {
+            "title": "4.1 Partes Interesadas",
+            "description": "La organización debe identificar el contexto interno y externo que pueda afectar al alcance de sus objetivos de la calidad",
+            "image": "https://res.cloudinary.com/dqyphg6sa/image/upload/v1704832394/SinCeO2/TraningApp/ob5zauhrmspokw4zfzsp.png"
+          },
+          {
+            "title": "4.2 Partes Interesadas",
+            "description": "La organización debe identificar las partes interesadas pertinentes que puedan afectar al alcace de los objetivos de la calidad y a la satisfacción del cliente ...",
+            "image": "https://res.cloudinary.com/dqyphg6sa/image/upload/v1704832442/SinCeO2/TraningApp/zg2zl4hg6twdj7wxktnx.jpg"
+          }
+        ]
+      }                  
+]
