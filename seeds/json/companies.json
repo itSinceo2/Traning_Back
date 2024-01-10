@@ -1,4 +1,5 @@
-[{
+[
+  {
     "_id": "659d5fbe1882f06f69db08b2",
     "name": "SinCeO2",
     "logo": "https://static.thenounproject.com/png/638636-200.png",
@@ -6,36 +7,36 @@
     "phone": 46542132,
     "email": "adas@asdasd.asda",
     "users": [],
+    "courses": [{ "id": "659427de15b4b05b063a2c36" }]
+  },
+  {
+    "_id": "65591b1dc66ef5be24705361",
+    "name": "Empresa 2",
+    "logo": "https://static.thenounproject.com/png/638636-200.png",
+    "nif": "123asda",
+    "phone": 46542132,
+    "email": "mail@empresa2.com",
+    "users": [],
     "courses": []
   },
-    {
-        "_id": "65591b1dc66ef5be24705361",
-        "name": "Empresa 2",
-        "logo": "https://static.thenounproject.com/png/638636-200.png",
-        "nif": "123asda",
-        "phone": 46542132,
-        "email": "mail@empresa2.com",
-        "users": [],
-        "courses": []
-    },
-    {
-        "_id": "6559489f23383c514300f14d",
-        "name": "Empresa 3",
-        "logo": "https://static.thenounproject.com/png/638636-200.png",
-        "nif": "123asda",
-        "phone": 46542132,
-        "email": "mail@empresa3.com",
-        "users": [],
-        "courses": []
-    },
-    {
-        "_id": "6559e8128b68f37c58b05484",
-        "name": "Empresa 4",
-        "logo": "https://static.thenounproject.com/png/638636-200.png",
-        "nif": "123asda",
-        "phone": 46542132,
-        "email": "mail@empresa4.com",
-        "users": [],
-        "courses": []
-    }
+  {
+    "_id": "6559489f23383c514300f14d",
+    "name": "Empresa 3",
+    "logo": "https://static.thenounproject.com/png/638636-200.png",
+    "nif": "123asda",
+    "phone": 46542132,
+    "email": "mail@empresa3.com",
+    "users": [],
+    "courses": []
+  },
+  {
+    "_id": "6559e8128b68f37c58b05484",
+    "name": "Empresa 4",
+    "logo": "https://static.thenounproject.com/png/638636-200.png",
+    "nif": "123asda",
+    "phone": 46542132,
+    "email": "mail@empresa4.com",
+    "users": [],
+    "courses": []
+  }
 ]
