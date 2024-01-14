@@ -67,7 +67,7 @@
                 ]
               },
               { 
-                "question": "¿Qué es un contexto?",
+                "question": "¿Se debe identificar para los externos e internos?",
                 "options": [
                   {
                     "option": "Es el entorno en el que se desenvuelve la organización",
@@ -88,7 +88,7 @@
                 ]
               },
               { 
-                "question": "¿Qué es un contexto?",
+                "question": "¿Se debe identificar todo el contexto?",
                 "options": [
                   {
                     "option": "Es el entorno en el que se desenvuelve la organización",
@@ -109,7 +109,7 @@
                 ]
               },
               { 
-                "question": "¿Qué es un contexto?",
+                "question": "¿Sólo se debe identificar lo pertinente?",
                 "options": [
                   {
                     "option": "Es el entorno en el que se desenvuelve la organización",
