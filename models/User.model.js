@@ -59,6 +59,14 @@ const userSchema = new Schema(
                 enum: ['enrolled', 'completed', 'pending'],
                 default: 'pending'
             },
+            progress: {
+                type: Number,
+                default: 0
+            },
+            dedication: {
+                type: Number,
+                default: 'free-time'
+            },
             startDate: {
                 type: Date,
                 default: Date.now

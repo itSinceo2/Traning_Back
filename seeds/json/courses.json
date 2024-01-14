@@ -9,8 +9,197 @@
             "title": "4.1 contexto",
             "description": "asdasdasd",
             "image": "https://res.cloudinary.com/dqyphg6sa/image/upload/v1704707452/SinCeO2/TraningApp/njpo9sirix5nmj1blo4p.png"
+          },
+          {
+            "title": "4.2 Partes Interesadas",
+            "description": "asdasdasd",
+            "image": "https://res.cloudinary.com/dqyphg6sa/image/upload/v1704707452/SinCeO2/TraningApp/njpo9sirix5nmj1blo4p.png"
+          },
+          {
+            "title": "4.3 Alcance del Sistema de Gestión de la Energía",
+            "description": "asdasdasd",
+            "image": "https://res.cloudinary.com/dqyphg6sa/image/upload/v1704707452/SinCeO2/TraningApp/njpo9sirix5nmj1blo4p.png"
+          },
+          {
+            "title": "4.4 Sistema de Gestión de la Energía",
+            "description": "asdasdasd",
+            "image": "https://res.cloudinary.com/dqyphg6sa/image/upload/v1704707452/SinCeO2/TraningApp/njpo9sirix5nmj1blo4p.png"
+          },
+          {
+            "title": "4.5 Responsabilidad de la Dirección",
+            "description": "asdasdasd",
+            "image": "https://res.cloudinary.com/dqyphg6sa/image/upload/v1704707452/SinCeO2/TraningApp/njpo9sirix5nmj1blo4p.png"
+          },
+          {
+            "title": "4.6 Gestión de los Recursos",
+            "description": "asdasdasd",
+            "image": "https://res.cloudinary.com/dqyphg6sa/image/upload/v1704707452/SinCeO2/TraningApp/njpo9sirix5nmj1blo4p.png"
+          },
+          {
+            "title": "4.7 Conciencia",
+            "description": "asdasdasd",
+            "image": "https://res.cloudinary.com/dqyphg6sa/image/upload/v1704707452/SinCeO2/TraningApp/njpo9sirix5nmj1blo4p.png"
           }
-        ]
+        ],
+        "test":[
+          {
+            "title": "4.1 contexto",
+            "questions":[
+              { 
+                "question": "¿Qué es un contexto?",
+                "opdions": [
+                  {
+                    "option": "Es el entorno en el que se desenvuelve la organización",
+                    "isCorrect": true
+                  },
+                  {
+                    "option": "Es el entorno en el que se desenvuelve la organización",
+                    "isCorrect": false
+                  },
+                  {
+                    "option": "Es el entorno en el que se desenvuelve la organización",
+                    "isCorrect": false
+                  },
+                  {
+                    "option": "Es el entorno en el que se desenvuelve la organización",
+                    "isCorrect": false
+                  }
+                ]
+              },
+              { 
+                "question": "¿Qué es un contexto?",
+                "opdions": [
+                  {
+                    "option": "Es el entorno en el que se desenvuelve la organización",
+                    "isCorrect": true
+                  },
+                  {
+                    "option": "Es el entorno en el que se desenvuelve la organización",
+                    "isCorrect": false
+                  },
+                  {
+                    "option": "Es el entorno en el que se desenvuelve la organización",
+                    "isCorrect": false
+                  },
+                  {
+                    "option": "Es el entorno en el que se desenvuelve la organización",
+                    "isCorrect": false
+                  }
+                ]
+              },
+              { 
+                "question": "¿Qué es un contexto?",
+                "opdions": [
+                  {
+                    "option": "Es el entorno en el que se desenvuelve la organización",
+                    "isCorrect": true
+                  },
+                  {
+                    "option": "Es el entorno en el que se desenvuelve la organización",
+                    "isCorrect": false
+                  },
+                  {
+                    "option": "Es el entorno en el que se desenvuelve la organización",
+                    "isCorrect": false
+                  },
+                  {
+                    "option": "Es el entorno en el que se desenvuelve la organización",
+                    "isCorrect": false
+                  }
+                ]
+              },
+              { 
+                "question": "¿Qué es un contexto?",
+                "opdions": [
+                  {
+                    "option": "Es el entorno en el que se desenvuelve la organización",
+                    "isCorrect": true
+                  },
+                  {
+                    "option": "Es el entorno en el que se desenvuelve la organización",
+                    "isCorrect": false
+                  },
+                  {
+                    "option": "Es el entorno en el que se desenvuelve la organización",
+                    "isCorrect": false
+                  },
+                  {
+                    "option": "Es el entorno en el que se desenvuelve la organización",
+                    "isCorrect": false
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "Exam":{
+          "title": "Examen de Interpretación de Norma ISO 50001:2016",
+          "questions": [
+            {
+              "question": "¿Qué es un contexto?",
+              "opdions": [
+                {
+                  "option": "Es el entorno en el que se desenvuelve la organización",
+                  "isCorrect": true
+                },
+                {
+                  "option": "Es el entorno en el que se desenvuelve la organización",
+                  "isCorrect": false
+                },
+                {
+                  "option": "Es el entorno en el que se desenvuelve la organización",
+                  "isCorrect": false
+                },
+                {
+                  "option": "Es el entorno en el que se desenvuelve la organización",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "question": "¿Qué es un contexto?",
+              "opdions": [
+                {
+                  "option": "Es el entorno en el que se desenvuelve la organización",
+                  "isCorrect": true
+                },
+                {
+                  "option": "Es el entorno en el que se desenvuelve la organización",
+                  "isCorrect": false
+                },
+                {
+                  "option": "Es el entorno en el que se desenvuelve la organización",
+                  "isCorrect": false
+                },
+                {
+                  "option": "Es el entorno en el que se desenvuelve la organización",
+                  "isCorrect": false
+                }
+              ]
+            },
+            {
+              "question": "¿Qué es un contexto?",
+              "opdions": [
+                {
+                  "option": "Es el entorno en el que se desenvuelve la organización",
+                  "isCorrect": true
+                },
+                {
+                  "option": "Es el entorno en el que se desenvuelve la organización",
+                  "isCorrect": false
+                },
+                {
+                  "option": "Es el entorno en el que se desenvuelve la organización",
+                  "isCorrect": false
+                },
+                {
+                  "option": "Es el entorno en el que se desenvuelve la organización",
+                  "isCorrect": false
+                }
+              ]
+            }
+          ]
+        }
       },
       {
         "_id":"659427de15b4b05b063a2c37",
@@ -27,6 +216,31 @@
             "title": "4.2 Partes Interesadas",
             "description": "La organización debe identificar las partes iteresadas pertinentes ...",
             "image": "https://res.cloudinary.com/dqyphg6sa/image/upload/v1704832296/SinCeO2/TraningApp/w3wgtvpejrne403xuxak.jpg"
+          },
+          {
+            "title": "4.3 Alcance del Sistema de Gestión de la Seguridad y Salud Ocupacional",
+            "description": "La organización debe establecer, implementar, mantener y mejorar continuamente un sistema de gestión de la seguridad y salud ocupacional, de acuerdo con los requisitos de esta norma internacional",
+            "image": "https://res.cloudinary.com/dqyphg6sa/image/upload/v1704832357/SinCeO2/TraningApp/i0scrykw8bu29f1ndgps.jpg"
+          },
+          {
+            "title": "4.4 Sistema de Gestión de la Seguridad y Salud Ocupacional",
+            "description": "La organización debe establecer, implementar, mantener y mejorar continuamente un sistema de gestión de la seguridad y salud ocupacional, de acuerdo con los requisitos de esta norma internacional",
+            "image": "https://res.cloudinary.com/dqyphg6sa/image/upload/v1704832357/SinCeO2/TraningApp/i0scrykw8bu29f1ndgps.jpg"
+          },
+          {
+            "title": "4.5 Responsabilidad de la Dirección",
+            "description": "La alta dirección debe demostrar su liderazgo y compromiso con respecto al sistema de gestión de la seguridad y salud ocupacional, tomando en cuenta su responsabilidad de asegurar que el sistema de gestión de la seguridad y salud ocupacional se integre en los procesos de negocio de la organización",
+            "image": "https://res.cloudinary.com/dqyphg6sa/image/upload/v1704832357/SinCeO2/TraningApp/i0scrykw8bu29f1ndgps.jpg"
+          },
+          {
+            "title": "4.6 Participación de los trabajadores",
+            "description": "La organización debe establecer, implementar y mantener procesos para la participación de los trabajadores, y, cuando existan, de sus representantes, en el desarrollo, planificación, aplicación, evaluación y mejora continua del sistema de gestión de la seguridad y salud ocupacional",
+            "image": "https://res.cloudinary.com/dqyphg6sa/image/upload/v1704832357/SinCeO2/TraningApp/i0scrykw8bu29f1ndgps.jpg"
+          },
+          {
+            "title": "4.7 Consulta y participación de las partes interesadas",
+            "description": "La organización debe establecer, implementar y mantener procesos para la consulta y participación de las partes interesadas pertinentes, en el desarrollo, planificación, aplicación, evaluación y mejora continua del sistema de gestión de la seguridad y salud ocupacional",
+            "image": "https://res.cloudinary.com/dqyphg6sa/image/upload/v1704832357/SinCeO2/TraningApp/i0scrykw8bu29f1ndgps.jpg"
           }
         ]
       },

@@ -36,8 +36,51 @@ const courseSchema = new mongoose.Schema({
             type: String,
             trim: true
         }
-    }
-]
+    }],
+    tests: [{
+        title: {
+            type: String,
+            trim: true
+        },
+        questions: [{
+            question: {
+                type: String,
+                trim: true
+            },
+            options: [{
+                option: {
+                    type: String,
+                    trim: true
+                },
+                isCorrect: {
+                    type: Boolean,
+                    default: false
+                }
+            }]
+        }]
+    }],
+    Exam: {
+        title: {
+            type: String,
+            trim: true
+        },
+        questions: [{
+            question: {
+                type: String,
+                trim: true
+            },
+            options: [{
+                option: {
+                    type: String,
+                    trim: true
+                },
+                isCorrect: {
+                    type: Boolean,
+                    default: false
+                }
+            }]
+        }]
+    },
     
 }, { timestamps: true,
     toJSON: {
