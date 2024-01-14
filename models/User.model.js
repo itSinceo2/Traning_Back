@@ -63,6 +63,14 @@ const userSchema = new Schema(
                 type: Number,
                 default: 0
             },
+            testsResults: [{
+                type: Schema.Types.ObjectId,
+                ref: 'TestResult'
+            }],
+            examResults: [{
+                type: Schema.Types.ObjectId,
+                ref: 'ExamResult'
+            }],
             dedication: {
                 type: Number,
                 default: 'free-time'

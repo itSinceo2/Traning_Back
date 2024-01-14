@@ -41,13 +41,13 @@
             "image": "https://res.cloudinary.com/dqyphg6sa/image/upload/v1704707452/SinCeO2/TraningApp/njpo9sirix5nmj1blo4p.png"
           }
         ],
-        "test":[
+        "tests":[
           {
             "title": "4.1 contexto",
             "questions":[
               { 
                 "question": "¿Qué es un contexto?",
-                "opdions": [
+                "options": [
                   {
                     "option": "Es el entorno en el que se desenvuelve la organización",
                     "isCorrect": true
@@ -68,7 +68,7 @@
               },
               { 
                 "question": "¿Qué es un contexto?",
-                "opdions": [
+                "options": [
                   {
                     "option": "Es el entorno en el que se desenvuelve la organización",
                     "isCorrect": true
@@ -89,7 +89,7 @@
               },
               { 
                 "question": "¿Qué es un contexto?",
-                "opdions": [
+                "options": [
                   {
                     "option": "Es el entorno en el que se desenvuelve la organización",
                     "isCorrect": true
@@ -110,7 +110,7 @@
               },
               { 
                 "question": "¿Qué es un contexto?",
-                "opdions": [
+                "options": [
                   {
                     "option": "Es el entorno en el que se desenvuelve la organización",
                     "isCorrect": true
@@ -137,7 +137,7 @@
           "questions": [
             {
               "question": "¿Qué es un contexto?",
-              "opdions": [
+              "options": [
                 {
                   "option": "Es el entorno en el que se desenvuelve la organización",
                   "isCorrect": true
@@ -158,7 +158,7 @@
             },
             {
               "question": "¿Qué es un contexto?",
-              "opdions": [
+              "options": [
                 {
                   "option": "Es el entorno en el que se desenvuelve la organización",
                   "isCorrect": true
@@ -179,7 +179,7 @@
             },
             {
               "question": "¿Qué es un contexto?",
-              "opdions": [
+              "options": [
                 {
                   "option": "Es el entorno en el que se desenvuelve la organización",
                   "isCorrect": true
