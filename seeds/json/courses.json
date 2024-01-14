@@ -130,6 +130,95 @@
                 ]
               }
             ]
+          },
+          {
+            "title": "4.4 Sistema de Gestión de la Energía",
+            "questions":[
+              { 
+                "question": "¿Qué es un contexto?",
+                "options": [
+                  {
+                    "option": "Es el entorno en el que se desenvuelve la organización",
+                    "isCorrect": true
+                  },
+                  {
+                    "option": "Es el entorno en el que se desenvuelve la organización",
+                    "isCorrect": false
+                  },
+                  {
+                    "option": "Es el entorno en el que se desenvuelve la organización",
+                    "isCorrect": false
+                  },
+                  {
+                    "option": "Es el entorno en el que se desenvuelve la organización",
+                    "isCorrect": false
+                  }
+                ]
+              },
+              { 
+                "question": "¿Qué es un contexto?",
+                "options": [
+                  {
+                    "option": "Es el entorno en el que se desenvuelve la organización",
+                    "isCorrect": true
+                  },
+                  {
+                    "option": "Es el entorno en el que se desenvuelve la organización",
+                    "isCorrect": false
+                  },
+                  {
+                    "option": "Es el entorno en el que se desenvuelve la organización",
+                    "isCorrect": false
+                  },
+                  {
+                    "option": "Es el entorno en el que se desenvuelve la organización",
+                    "isCorrect": false
+                  }
+                ]
+              },
+              { 
+                "question": "¿Qué es un contexto?",
+                "options": [
+                  {
+                    "option": "Es el entorno en el que se desenvuelve la organización",
+                    "isCorrect": true
+                  },
+                  {
+                    "option": "Es el entorno en el que se desenvuelve la organización",
+                    "isCorrect": false
+                  },
+                  {
+                    "option": "Es el entorno en el que se desenvuelve la organización",
+                    "isCorrect": false
+                  },
+                  {
+                    "option": "Es el entorno en el que se desenvuelve la organización",
+                    "isCorrect": false
+                  }
+                ]
+              },
+              { 
+                "question": "¿Qué es un contexto?",
+                "options": [
+                  {
+                    "option": "Es el entorno en el que se desenvuelve la organización",
+                    "isCorrect": true
+                  },
+                  {
+                    "option": "Es el entorno en el que se desenvuelve la organización",
+                    "isCorrect": false
+                  },
+                  {
+                    "option": "Es el entorno en el que se desenvuelve la organización",
+                    "isCorrect": false
+                  },
+                  {
+                    "option": "Es el entorno en el que se desenvuelve la organización",
+                    "isCorrect": false
+                  }
+                ]
+              }
+            ]
           }
         ],
         "Exam":{
