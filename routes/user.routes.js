@@ -8,10 +8,11 @@ const authMiddleware = require('../middlewares/auth.middleware');
 router.post('/register', usersController.register);
 router.post('/login', usersController.login);
 router.get('/', usersController.list);
-router.get('/me', authMiddleware.isAuthenticated, usersController.getCurrentUser);//Falta Probar
+router.get('/me', authMiddleware.isAuthenticated, usersController.getCurrentUser);
 router.get('/:id', usersController.getOne);
 router.put('/:id', usersController.update);
 router.delete('/:id', usersController.delete);
+router.put('/test/:id', authMiddleware.isAuthenticated, usersController.updateTestResults);
 
 
 module.exports = router;

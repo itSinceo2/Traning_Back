@@ -121,3 +121,40 @@ module.exports.getCurrentUser = (req, res, next) => {
             next(error);
         });
 }
+
+//actualizar el testResults del usuario
+
+module.exports.updateTestResults = async (req, res, next) => {
+    try {
+        console.log("req.body", req.body);
+        const { id } = req.params;
+        const { testsResults } = req.body;        
+
+        const user = await User.findById(id);
+
+        if (!user) {
+            return next(createError(StatusCodes.NOT_FOUND, "User not found"));
+        }
+        // Encontrar el objeto `testsResults` existente
+        const courseTest = user.courses.find(course =>{
+            const userId = course.course._id.toString();
+            return (userId === testsResults.courseId)});
+
+        console.log(courseTest);
+
+        if (!courseTest) {
+            console.log("no hay");
+            return next(createError(StatusCodes.NOT_FOUND, "Course not found"));
+        }
+
+        // Actualizar el objeto `testsResults` existente
+        courseTest.testsResults = testsResults;
+
+        await user.save();
+
+        res.json(user);
+    } catch (error) {
+        console.error("Error:", error);
+        next(error);
+    }
+};

@@ -64,8 +64,21 @@ const userSchema = new Schema(
                 default: 0
             },
             testsResults: [{
-                type: Schema.Types.ObjectId,
-                ref: 'TestResult'
+                courseId: {
+                    type: Schema.Types.ObjectId,
+                    ref: 'Course'
+                },
+                responses: [{
+                    question: String, // Puedes cambiar esto a ObjectId si lo prefieres
+                    response: String // Puedes cambiar esto a ObjectId si lo prefieres
+                }],
+                score: {
+                    type: Number,
+                    default: 0
+                },
+                testId: {
+                    type: String,
+                },
             }],
             examResults: [{
                 type: Schema.Types.ObjectId,
@@ -73,7 +86,7 @@ const userSchema = new Schema(
             }],
             dedication: {
                 type: Number,
-                default: 'free-time'
+                default: 0
             },
             startDate: {
                 type: Date,
