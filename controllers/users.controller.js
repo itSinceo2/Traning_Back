@@ -135,22 +135,22 @@ module.exports.updateTestResults = async (req, res, next) => {
         if (!user) {
             return next(createError(StatusCodes.NOT_FOUND, "User not found"));
         }
-        // Encontrar el objeto `testsResults` existente
+
         const courseTest = user.courses.find(course =>{
             const userId = course.course._id.toString();
             return (userId === testsResults.courseId)});
 
-        console.log(courseTest);
-
         if (!courseTest) {
-            console.log("no hay");
             return next(createError(StatusCodes.NOT_FOUND, "Course not found"));
         }
 
-        // Actualizar el objeto `testsResults` existente
-        courseTest.testsResults = testsResults;
-
-        await user.save();
+        if(!testsResults.testId){
+            courseTest.testsResults = testsResults;
+            await user.save();
+        } else {
+            courseTest.testsResults.push(testsResults);
+            await user.save();
+        }
 
         res.json(user);
     } catch (error) {
