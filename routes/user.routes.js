@@ -13,6 +13,8 @@ router.get('/:id', usersController.getOne);
 router.put('/:id', usersController.update);
 router.delete('/:id', usersController.delete);
 router.put('/test/:id', authMiddleware.isAuthenticated, usersController.updateTestResults);
+//deditation
+router.put('/dedication/:id', authMiddleware.isAuthenticated, usersController.updateCourseTime);
 
 
 module.exports = router;
