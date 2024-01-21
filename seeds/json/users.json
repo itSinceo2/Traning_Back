@@ -64,13 +64,14 @@
     ]
   },
   {
+    "_id": "65ad1fe6cbdd4924b9630c0d",
     "username": "Monica_Bellucci",
     "password": "monica123",
     "email": "monica.warehouse@hack-erp.com",
     "role": "Usuario",
     "avatar": "https://image.tmdb.org/t/p/w500/qlT4904d8oi2NIs28RrgnIZDFZB.jpg",
     "active": true,
-    "company": "65591b1dc66ef5be24705361",
+    "company": "659d5fbe1882f06f69db08b2",
     "courses": [
       {
         "course": "659427de15b4b05b063a2c36",
@@ -80,6 +81,7 @@
     ]
   },
   {
+    "_id": "65ad1fe6cbdd4924b9630c0f",
     "username": "Gal_Gadot",
     "password": "gal123",
     "email": "gal.warehouse@hack-erp.com",
