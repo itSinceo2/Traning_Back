@@ -91,7 +91,12 @@
       {
         "course": "659427de15b4b05b063a2c36",
         "status": "pending",
-        "startDate": "2023-11-11T00:00:00.000Z"
+        "startDate": "2023-11-11T00:00:00.000Z",
+        "progress": {
+          "courseLength": 0,
+          "courseProgress": 0,
+          "courseProgressPercent": 0
+        }
       }
     ]
   },

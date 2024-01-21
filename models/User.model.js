@@ -60,8 +60,18 @@ const userSchema = new Schema(
                 default: 'pending'
             },
             progress: {
-                type: Number,
-                default: 0
+                courseLength:{
+                    type: Number,
+                    default: 0
+                },
+                courseProgress:{
+                    type: Number,
+                    default: 0
+                },
+                courseProgressPercent:{
+                    type: Number,
+                    default: 0
+                }
             },
             testsResults: [{
                 courseId: {

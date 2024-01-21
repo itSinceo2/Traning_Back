@@ -15,6 +15,8 @@ router.delete('/:id', usersController.delete);
 router.put('/test/:id', authMiddleware.isAuthenticated, usersController.updateTestResults);
 //deditation
 router.put('/dedication/:id', authMiddleware.isAuthenticated, usersController.updateCourseTime);
+//progress
+router.put('/progress/:id', authMiddleware.isAuthenticated, usersController.updateCourseProgress);
 
 
 module.exports = router;

@@ -4,6 +4,154 @@ const { StatusCodes } = require('http-status-codes');
 const createError = require("http-errors");
 const jwt = require("jsonwebtoken");
 
+/* 
+const mongoose = require('mongoose');
+const bcrypt = require('bcrypt');
+const SALT_WORK_FACTOR = 10;
+const { Schema, model } = mongoose;
+const ROLES = ['Administrador SinCeO2','Administrador', 'Usuario'];
+
+const userSchema = new Schema(
+    {
+        username: {
+            type: String,
+            required: [true, 'Username is required.'],
+            unique: true,
+            trim: true
+        },
+        password: {
+            type: String,
+            required: [true, 'Password is required.']
+        },
+        email: {
+            type: String,
+            required: [true, 'Email is required.'],
+            unique: true,
+            trim: true
+        },
+        role: {
+            type: String,
+            enum: ROLES,
+            default: 'user'
+        },
+        avatar: {
+            type: String,
+            default: 'https://res.cloudinary.com/dv7hswrot/image/upload/v1606988059/avatar/avatar_cugq40.png'
+        },
+        active: {
+            type: Boolean,
+            default: false
+        },
+        activationToken: {
+            type: String,
+            default: () => {
+                return (
+                    Math.random().toString(36).substring(2, 15) +
+                    Math.random().toString(36).substring(2, 15)
+                );
+            }
+        },
+        company: {
+            type: Schema.Types.ObjectId,
+            ref: 'Company'
+        },
+        courses: [{
+            course: {
+                type: Schema.Types.ObjectId,
+                ref: 'Course',
+                default: null
+            },
+            status: {
+                type: String,
+                enum: ['enrolled', 'completed', 'pending'],
+                default: 'pending'
+            },
+            progress: {
+                courseLength:{
+                    type: Number,
+                    default: 0
+                },
+                courseProgress:{
+                    type: Number,
+                    default: 0
+                },
+                courseProgressPercent:{
+                    type: Number,
+                    default: 0
+                }
+            },
+            testsResults: [{
+                courseId: {
+                    type: Schema.Types.ObjectId,
+                    ref: 'Course'
+                },
+                responses: [{
+                    question: String, // Puedes cambiar esto a ObjectId si lo prefieres
+                    response: String // Puedes cambiar esto a ObjectId si lo prefieres
+                }],
+                score: {
+                    type: Number,
+                    default: 0
+                },
+                testId: {
+                    type: String,
+                },
+            }],
+            examResults: [{
+                type: Schema.Types.ObjectId,
+                ref: 'ExamResult'
+            }],
+            dedication: {
+                type: Number,
+                default: 0
+            },
+            startDate: {
+                type: Date,
+                default: Date.now
+            }
+        }],
+    },
+    {
+        timestamps: true,
+        toJSON : {
+            transform: (doc, ret) => {
+                ret.id = doc._id;
+                delete ret._id;
+                delete ret.__v;
+                delete ret.password;
+                return ret;
+            }
+        }
+    }
+);
+
+userSchema.pre('save', function (next) {
+    const user = this;
+    if (!user.isModified('password')) {
+        next();
+    } else {
+        bcrypt
+            .genSalt(SALT_WORK_FACTOR)
+            .then(salt => {
+                return bcrypt.hash(user.password, salt).then(hash => {
+                    user.password = hash;
+                    next();
+                });
+            })
+            .catch(error => next(error));
+    }
+});
+
+userSchema.methods.checkPassword = function (password) {
+    return bcrypt.compare(password, this.password);
+}
+
+const User = model('User', userSchema);
+module.exports = User;
+
+
+*/
+
 module.exports.register = (req, res, next) => {
     if (req.file) {
         req.body.avatar = req.file.path;
@@ -165,8 +313,7 @@ module.exports.updateCourseTime = async (req, res, next) => {
     try {
         const { courseId, dedication } = req.body;
         const { id } = req.params;
-        console.log(`id: ${id}`);
-        console.log( req.body);
+
 
         const user = await User.findById(id);
 
@@ -186,7 +333,7 @@ module.exports.updateCourseTime = async (req, res, next) => {
         user.courses[courseIndex].dedication = dedication;
         await user.save();
 
-        console.log("user", user);
+  
 
         res.json(user);
     } catch (error) {
@@ -196,4 +343,43 @@ module.exports.updateCourseTime = async (req, res, next) => {
 };
 
   
+//updateCourseProgress
+module.exports.updateCourseProgress = async (req, res, next) => {
+    console.log(req.body)
+    try {
+        const { courseId } = req.body;
+        const { id } = req.params;
+        const progress = {
+            courseLength: req.body.courseLength,
+            courseProgress: req.body.courseProgress,
+            courseProgressPercent: req.body.courseProgressPercent
+        }
 
+        const user = await User.findById(id);
+
+        if (!user) {
+            return next(createError(StatusCodes.NOT_FOUND, "User not found"));
+        }
+
+        const courseIndex = user.courses.findIndex(course => course.course._id.toString() === courseId);
+
+        if (courseIndex === -1) {
+            return next(createError(StatusCodes.NOT_FOUND, "Course not found"));
+        }
+
+        // Actualizar el campo progress en el array courses
+        user.courses[courseIndex].progress = {
+            courseLength: progress.courseLength,
+            courseProgress: progress.courseProgress,
+            courseProgressPercent: progress.courseProgressPercent
+        };
+
+        await user.save();
+        console.log("user", user.courses[courseIndex].progress);
+
+        res.json(user);
+    } catch (error) {
+        console.error("Error:", error);
+        next(error);
+    }
+};
