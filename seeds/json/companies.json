@@ -17,7 +17,7 @@
     "phone": 46542132,
     "email": "mail@empresa2.com",
     "users": ["65ad2dadba7d6bd39c91f490", "65ad2dadba7d6bd39c91f49c", "65ad2dadba7d6bd39c91f4a0"],
-    "courses": []
+    "courses": ["659427de15b4b05b063a2c36"]
   },
   {
     "_id": "6559489f23383c514300f14d",
@@ -27,7 +27,7 @@
     "phone": 46542132,
     "email": "mail@empresa3.com",
     "users": ["65ad2dadba7d6bd39c91f492","65ad2dadba7d6bd39c91f494", "65ad2dadba7d6bd39c91f4a2"],
-    "courses": []
+    "courses": ["659427de15b4b05b063a2c36"]
   },
   {
     "_id": "6559e8128b68f37c58b05484",
@@ -37,6 +37,6 @@
     "phone": 46542132,
     "email": "mail@empresa4.com",
     "users": ["65ad2dadba7d6bd39c91f496", "65ad2dadba7d6bd39c91f49e"],
-    "courses": []
+    "courses": ["659427de15b4b05b063a2c36"]
   }
 ]
