@@ -17,6 +17,7 @@ router.put('/test/:id', authMiddleware.isAuthenticated, usersController.updateTe
 router.put('/dedication/:id', authMiddleware.isAuthenticated, usersController.updateCourseTime);
 //progress
 router.put('/progress/:id', authMiddleware.isAuthenticated, usersController.updateCourseProgress);
+router.put('/updatingcourses/:id', authMiddleware.isAuthenticated, usersController.updateCourseStatus);
 
 
 module.exports = router;

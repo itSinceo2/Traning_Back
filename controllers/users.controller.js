@@ -384,3 +384,34 @@ module.exports.updateCourseProgress = async (req, res, next) => {
         next(error);
     }
 };
+
+//Agregando o quitando cursos a la lista de cursos del usuario
+module.exports.updateCourseStatus = async (req, res, next) => {
+    try {
+        const { id } = req.params;
+        const { coursesId } = req.body;
+
+        const user = await User.findById(id);
+
+        if (!user) {
+            return next(createError(StatusCodes.NOT_FOUND, "User not found"));
+        }
+
+        // Filtrar cursos existentes del usuario que no están en coursesId
+        const updatedCourses = user.courses.filter(course => coursesId.includes(course.course.toString()));
+
+        // Añadir nuevos cursos de coursesId al usuario
+        const newCourses = coursesId
+            .filter(courseId => !user.courses.some(course => course.course.toString() === courseId))
+            .map(courseId => ({ course: courseId }));
+
+        user.courses = [...updatedCourses, ...newCourses];
+
+        await user.save();
+
+        res.status(StatusCodes.OK).json({ message: "User courses updated successfully", user });
+    } catch (error) {
+        next(error);
+    }
+};
+
