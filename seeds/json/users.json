@@ -1,5 +1,6 @@
 [
   {
+    "_id": "65ad2dadba7d6bd39c91f490",
     "username": "Arnold_Schwarzenegger",
     "password": "arnold123",
     "email": "arnold.sales@hack-erp.com",
@@ -16,6 +17,7 @@
     ]
   },
   {
+    "_id": "65ad2dadba7d6bd39c91f492",
     "username": "Ben_Affleck",
     "password": "ben123",
     "email": "ben.sales@hack-erp.com",
@@ -32,13 +34,14 @@
     ]
   },
   {
+    "_id": "65ad2dadba7d6bd39c91f494",
     "username": "Idris_Elba",
     "password": "idris123",
     "email": "idris.production@hack-erp.com",
     "role": "Administrador SinCeO2",
     "avatar": "https://image.tmdb.org/t/p/w500/d9NkfCwczP0TjgrjpF94jF67SK8.jpg",
     "active": true,
-    "company": "659c0383f872e62b6cdb9322",
+    "company": "6559489f23383c514300f14d",
     "courses": [
       {
         "course": "659427de15b4b05b063a2c36",
@@ -48,6 +51,7 @@
     ]
   },
   {
+    "_id": "65ad2dadba7d6bd39c91f496",
     "username": "Johnny_Depp",
     "password": "johnny123",
     "email": "johnny.production@hack-erp.com",
@@ -103,13 +107,14 @@
     ]
   },
   {
+    "_id": "65ad2dadba7d6bd39c91f49c",
     "username": "Ian_McKellen",
     "password": "ian123",
     "email": "ian.purchasing@hack-erp.com",
     "role": "Usuario",
     "avatar": "https://image.tmdb.org/t/p/w500/coWjgMEYJjk2OrNddlXCBm8EIr3.jpg",
     "active": true,
-    "company": "6559bcf223383c514300f2bc",
+    "company": "65591b1dc66ef5be24705361",
     "courses": [
       {
         "course": "659427de15b4b05b063a2c36",
@@ -119,6 +124,7 @@
     ]
   },
   {
+    "_id": "65ad2dadba7d6bd39c91f49e",
     "username": "Matt_Damon",
     "password": "matt123",
     "email": "matt.purchasing@hack-erp.com",
@@ -135,6 +141,7 @@
     ]
   },
   {
+    "_id": "65ad2dadba7d6bd39c91f4a0",
     "username": "David_Harbour",
     "password": "david123",
     "email": "david.sales@hack-erp.com",
@@ -151,6 +158,7 @@
     ]
   },
   {
+    "_id": "65ad2dadba7d6bd39c91f4a2",
     "username": "Ansel_Elgort",
     "password": "ansel123",
     "email": "ansel.sales@hack-erp.com",

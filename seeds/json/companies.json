@@ -16,7 +16,7 @@
     "nif": "123asda",
     "phone": 46542132,
     "email": "mail@empresa2.com",
-    "users": [],
+    "users": ["65ad2dadba7d6bd39c91f490", "65ad2dadba7d6bd39c91f49c", "65ad2dadba7d6bd39c91f4a0"],
     "courses": []
   },
   {
@@ -26,7 +26,7 @@
     "nif": "123asqa",
     "phone": 46542132,
     "email": "mail@empresa3.com",
-    "users": [],
+    "users": ["65ad2dadba7d6bd39c91f492","65ad2dadba7d6bd39c91f494", "65ad2dadba7d6bd39c91f4a2"],
     "courses": []
   },
   {
@@ -36,7 +36,7 @@
     "nif": "123ahda",
     "phone": 46542132,
     "email": "mail@empresa4.com",
-    "users": [],
+    "users": ["65ad2dadba7d6bd39c91f496", "65ad2dadba7d6bd39c91f49e"],
     "courses": []
   }
 ]
