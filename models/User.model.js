@@ -79,8 +79,8 @@ const userSchema = new Schema(
                     ref: 'Course'
                 },
                 responses: [{
-                    question: String, // Puedes cambiar esto a ObjectId si lo prefieres
-                    response: String // Puedes cambiar esto a ObjectId si lo prefieres
+                    question: String,
+                    response: String 
                 }],
                 score: {
                     type: Number,

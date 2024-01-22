@@ -198,6 +198,7 @@ module.exports.login = (req, res, next) => {
 
 module.exports.getOne = (req, res, next) => {
     User.findById(req.params.id)
+        .populate("courses.course")
         .then((user) => {
             if (!user) {
                 next(createHttpError(StatusCodes.NOT_FOUND, "User not found"));
@@ -322,7 +323,7 @@ module.exports.updateCourseTime = async (req, res, next) => {
             return next(createError(StatusCodes.NOT_FOUND, "User not found"));
         }
 
-       
+
         const courseIndex = user.courses.findIndex(course => course.course._id.toString() === courseId);
         console.log(`courseIndex: ${courseIndex}`);
 
@@ -333,7 +334,7 @@ module.exports.updateCourseTime = async (req, res, next) => {
         user.courses[courseIndex].dedication = dedication;
         await user.save();
 
-  
+
 
         res.json(user);
     } catch (error) {
@@ -342,7 +343,7 @@ module.exports.updateCourseTime = async (req, res, next) => {
     }
 };
 
-  
+
 //updateCourseProgress
 module.exports.updateCourseProgress = async (req, res, next) => {
     console.log(req.body)
