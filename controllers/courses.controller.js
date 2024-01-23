@@ -86,19 +86,19 @@ module.exports.updateContentImage = (req, res, next) => {
         { $set: updateFields },
         { new: true }
     )
-    .then(course => {
-        if (!course) {
-            next(createError(StatusCodes.NOT_FOUND, "Course not found"));
-        } else {
-            console.log('entrando en update');
-            res.status(StatusCodes.OK).json(course);
-            console.log("Content updated");
-        }
-    })
-    .catch((err) => {
-        console.log(err);
-        next(createError(StatusCodes.INTERNAL_SERVER_ERROR, "Internal server error"));
-    });
+        .then(course => {
+            if (!course) {
+                next(createError(StatusCodes.NOT_FOUND, "Course not found"));
+            } else {
+                console.log('entrando en update');
+                res.status(StatusCodes.OK).json(course);
+                console.log("Content updated");
+            }
+        })
+        .catch((err) => {
+            console.log(err);
+            next(createError(StatusCodes.INTERNAL_SERVER_ERROR, "Internal server error"));
+        });
 };
 
 
@@ -147,3 +147,44 @@ module.exports.delete = (req, res, next) => {
             next(createError(StatusCodes.INTERNAL_SERVER_ERROR, "Internal server error"));
         });
 }
+
+//update student list
+
+module.exports.updateCourseStudent = async (req, res, next) => {
+    try {
+
+        const { studentId, courseId } = req.body;
+
+        console.log(req.body);
+        console.log(courseId);
+        console.log(studentId);
+
+        const course = await Course.findById(courseId);
+
+        if (!course) {
+            console.log("no hay curso");
+            return next(createError(StatusCodes.NOT_FOUND, 'Course not found'));
+        }
+        console.log("hay curso");
+        const currentStudents = course.students.map(String);
+
+        const studentIndex = currentStudents.indexOf(studentId);
+
+        if (studentIndex !== -1) {
+            currentStudents.splice(studentIndex, 1);
+        } else {
+            currentStudents.push(studentId);
+        }
+
+        course.students = currentStudents;
+
+        console.log(course);
+
+        await course.save();
+
+        res.status(StatusCodes.OK).json({ message: 'Course students updated successfully', course });
+    } catch (error) {
+        console.log(error);
+        next(error);
+    }
+};
