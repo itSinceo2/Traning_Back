@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const SALT_WORK_FACTOR = 10;
 const { Schema, model } = mongoose;
-const ROLES = ['Administrador SinCeO2','Administrador', 'Usuario'];
+const ROLES = ['Administrador SinCeO2', 'Administrador', 'Usuario'];
 
 const userSchema = new Schema(
     {
@@ -60,15 +60,15 @@ const userSchema = new Schema(
                 default: 'pending'
             },
             progress: {
-                courseLength:{
+                courseLength: {
                     type: Number,
                     default: 0
                 },
-                courseProgress:{
+                courseProgress: {
                     type: Number,
                     default: 0
                 },
-                courseProgressPercent:{
+                courseProgressPercent: {
                     type: Number,
                     default: 0
                 }
@@ -80,7 +80,7 @@ const userSchema = new Schema(
                 },
                 responses: [{
                     question: String,
-                    response: String 
+                    response: String
                 }],
                 score: {
                     type: Number,
@@ -90,10 +90,21 @@ const userSchema = new Schema(
                     type: String,
                 },
             }],
-            examResults: [{
-                type: Schema.Types.ObjectId,
-                ref: 'ExamResult'
-            }],
+            examResults: {
+                responses: [{
+                    question: String,
+                    response: String,
+                    isCorrect: Boolean
+                }],
+                score: {
+                    type: Number,
+                    default: 0
+                },
+                result: {
+                    type: String,
+                    default: 'pending'
+                }
+            },
             dedication: {
                 type: Number,
                 default: 0
@@ -106,7 +117,7 @@ const userSchema = new Schema(
     },
     {
         timestamps: true,
-        toJSON : {
+        toJSON: {
             transform: (doc, ret) => {
                 ret.id = doc._id;
                 delete ret._id;

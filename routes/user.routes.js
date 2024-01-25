@@ -18,6 +18,8 @@ router.put('/dedication/:id', authMiddleware.isAuthenticated, usersController.up
 //progress
 router.put('/progress/:id', authMiddleware.isAuthenticated, usersController.updateCourseProgress);
 router.put('/updatingcourses/:id', authMiddleware.isAuthenticated, usersController.updateCourseStatus);
+//update exam results
+router.put('/examresults/:id', authMiddleware.isAuthenticated, usersController.updateExamResults);
 
 
 module.exports = router;
