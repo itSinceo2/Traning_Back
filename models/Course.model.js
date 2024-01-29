@@ -16,20 +16,21 @@ const courseSchema = new mongoose.Schema({
     },
     mainImage: {
         type: String,
-        trim: true
+        trim: true,
+        default: 'https://res.cloudinary.com/dv7hswrot/image/upload/v1606988059/avatar/avatar_cugq40.png'
     },
     students: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User'
     }],
-    content:[{
+    content: [{
         title: {
             type: String,
             trim: true
         },
         description: {
             type: String,
-            
+
             trim: true
         },
         image: {
@@ -81,8 +82,9 @@ const courseSchema = new mongoose.Schema({
             }]
         }]
     },
-    
-}, { timestamps: true,
+
+}, {
+    timestamps: true,
     toJSON: {
         transform: (doc, ret) => {
             ret.id = doc._id;
@@ -90,7 +92,8 @@ const courseSchema = new mongoose.Schema({
             delete ret.__v;
             return ret;
         }
-    } });
+    }
+});
 
 const Course = mongoose.model('Course', courseSchema);
 

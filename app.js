@@ -15,7 +15,7 @@ const app = express();
 //cors
 app.use(
   cors({
-    origin: ["https://heroic-swan-754ab4.netlify.app"],
+    origin: ["https://lucent-unicorn-0dadf7.netlify.app/", "https://heroic-swan-754ab4.netlify.app"],
   })
 );
 // app.use(
@@ -30,7 +30,11 @@ app.use(express.json());
 
 //ruta inicial
 
-app.use("/", (req, res) => {
+// app.use("/", (req, res) => {
+//   res.send("Welcome to the API");
+// });
+
+app.get("/", (req, res) => {
   res.send("Welcome to the API");
 });
 

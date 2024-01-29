@@ -18,6 +18,7 @@ module.exports.register = (req, res, next) => {
 }
 
 module.exports.login = (req, res, next) => {
+    console.log('entrando en login')
     const loginError = () => next(createError(StatusCodes.UNAUTHORIZED, "Invalid email or password"));
     const { email, password } = req.body;
 
