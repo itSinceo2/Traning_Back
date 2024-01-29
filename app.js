@@ -15,7 +15,7 @@ const app = express();
 //cors
 app.use(
   cors({
-    origin: ["https://lucent-unicorn-0dadf7.netlify.app", "https://heroic-swan-754ab4.netlify.app"],
+    origin: ["http://127.0.0.1:5173", "http://localhost:5173"]|| process.env.CORS_ORIGINJC || process.env.CORS_ORIGINSCO2
   })
 );
 // app.use(
