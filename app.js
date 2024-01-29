@@ -15,7 +15,7 @@ const app = express();
 //cors
 app.use(
   cors({
-    origin: ["https://heroic-swan-754ab4.netlify.app/login"],
+    origin: ["https://heroic-swan-754ab4.netlify.app"],
   })
 );
 // app.use(
