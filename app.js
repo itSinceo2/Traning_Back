@@ -12,14 +12,8 @@ require("./config/db.config");
 
 const app = express();
 
-//cors
-app.use(
-  cors({
-    origin: "*",
-    credentials:true,            //access-control-allow-credentials:true
-    optionSuccessStatus:200,
-  })
-);
+cors
+app.use(cors())
 // app.use(
 //     cors({
 //       origin: process.env.CORS_ORIGIN || ["http://localhost:5173", "http://127.0.0.1:5173"],
@@ -30,11 +24,7 @@ app.use(
 app.use(logger("dev"));
 app.use(express.json());
 
-//ruta inicial
 
-// app.use("/", (req, res) => {
-//   res.send("Welcome to the API");
-// });
 
 app.get("/", (req, res) => {
   res.send("Welcome to the API");
