@@ -25,9 +25,9 @@ app.use(express.json());
 
 //ruta inicial
 
-app.get("/", (req, res) => {
-    res.json({ message: "Welcome to the API" });
-  });
+app.use("/", (req, res) => {
+  res.send("Welcome to the API");
+});
 
 //rutas
 const usersRouter = require("./routes/user.routes");
