@@ -15,7 +15,9 @@ const app = express();
 //cors
 app.use(
   cors({
-
+    origin: "*",
+    credentials:true,            //access-control-allow-credentials:true
+    optionSuccessStatus:200,
   })
 );
 // app.use(
