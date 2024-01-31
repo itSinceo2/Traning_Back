@@ -27,7 +27,6 @@ module.exports.login = (req, res, next) => {
     }
     User.findOne({ email: email })
         .then(user => {
-            console.log(user)
             if (!user) {
                 next(loginError());
             } else {
